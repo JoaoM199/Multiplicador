@@ -7,7 +7,9 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Wellcome to Multiplicator</h1>
+    <div class="title"
+        <h1>Wellcome to Multiplicator</h1>
+    </div>
     <div>
         <form action="/calculate" method="POST">
             <label for="multiplicator">Multiplicator: </label>
@@ -26,7 +28,10 @@
                 <li>{{ result }}</li>
         </ul>
         {% endfor %}
+        {% endif %}
     </div>
-    {% endif %}
+    <div class="footer">
+        (c) Joao M Pacheco, 2024
+    </div>
 </body>
 </html>
