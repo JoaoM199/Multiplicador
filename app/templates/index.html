@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplicator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Wellcome to Multiplicator</h1>
+    <div>
+        <form action="/calculate" method="POST">
+            <label for="multiplicator">Multiplicator: </label>
+            <input type="text" id="multiplicator" name="multiplicator">
+            <br/>
+            <label for="values">Number of values:</label>
+            <input type="text" id="values" name="values">
+            <br/>
+            <input type="submit" value="Calculate">
+        </form>
+    </div>
+    <div>
+        {% if results is not none %}
+        <ul>
+            {% for result in results %}
+                <li>{{ result }}</li>
+        </ul>
+        {% endfor %}
+    </div>
+    {% endif %}
+</body>
+</html>

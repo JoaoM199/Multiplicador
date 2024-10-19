@@ -1,2 +1,3 @@
 # Multiplicador
-Practicing communication between frontend and backend
+## Description
+A simple application that multiplies several values to a value entered by the user
